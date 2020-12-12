@@ -1,0 +1,8 @@
+#!/bin/sh 
+input=$(printf "Bloquear\nDesligar\nReiniciar" | dmenu -i -m 0 -fn 'Meslog LGS NF' -nb '#282A36' -nf '#A4A8BC' -sb '#3F4255')
+
+case $input in
+	"Desligar") systemctl poweroff;;
+	"Reiniciar") systemctl reboot;;
+	"Bloquear") lock;;
+esac
