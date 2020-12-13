@@ -1,0 +1,23 @@
+import:
+  - /home/altart/.config/alacritty/dracula.yml
+
+font:
+  # The size to use.
+  size: 11
+  # The normal (roman) font face to use.
+  normal:
+    family: MesloLGS NF
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: MesloLGS NF
+    # Style can be specified to pick a specific face.
+    # style: Bold
+
+  # The italic font face
+  italic:
+    family: MesloLGS NF
+    # Style can be specified to pick a specific face.
+    # style: Italic
