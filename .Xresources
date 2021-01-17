@@ -1,0 +1,42 @@
+Xcursor.theme:	Pop
+
+! special
+
+st.font: MesloLGS NF:size=11:style=regular
+
+st.foreground:   #f8f8f2
+st.background:   #282a36
+st.cursorColor:  #f8f8f2
+
+! black
+st.color0:       #000000
+st.color8:       #4d4d4d
+
+! red
+st.color1:       #ff5555
+st.color9:       #ff6e67
+
+! green
+st.color2:       #50fa7b
+st.color10:      #5af78e
+
+! yellow
+st.color3:       #f1fa8c
+st.color11:      #f4f99d
+
+! blue
+st.color4:       #bd93f9
+st.color12:      #caa9fa
+
+! magenta
+st.color5:       #ff79c6
+st.color13:      #ff92d0
+
+! cyan
+st.color6:       #8be9fd
+st.color14:      #9aedfe
+
+! white
+st.color7:       #bfbfbf
+st.color15:      #e6e6e6
+
