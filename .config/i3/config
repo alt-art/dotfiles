@@ -1,12 +1,14 @@
-exec xset s off
-exec xset -dpms
-exec xset s noblank
+exec_always xset s off
+exec_always xset -dpms
+exec_always xset s noblank
+
+exec_always --no-startup-id autotiling
 
 #Gaps
 gaps inner 7
 
 #Gaps anti-blackboard
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Compton for transparency
 exec_always --no-startup-id compton --config ~/.config/compton.conf
@@ -110,19 +112,25 @@ font pango:MesloLGS NF,Bold 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
+
+bindsym $mod+i exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -i -m 0 -l 10 -fn "Meslog LGS NF" -nb "#282A36" -nf "#A4A8BC" -sb "#3F4255"
-# There also is the rofi-drun top which only displays applications
-# shipping a .desktop file. It is a wrapper around rofi
-bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop --term="alacritty" --dmenu="dmenu -i -m 0 -l 10 -fn 'Meslog LGS NF' -nb '#282A36' -nf '#A4A8BC' -sb '#3F4255'"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -c -m 0 -l 10
+# There also is the dmenu-desktop top which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu
+bindsym $mod+Shift+d exec --no-startup-id pri3o-dmenu-desktop -m "dmenu -i -c -m 0 -l 10"
 
-#bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --choices shutdown/reboot"
 bindsym $mod+p exec --no-startup-id power-dmenu
+
+#Screen capture window
+bindsym Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+#Screen capture selection
+bindsym $mod+Print exec maim -s | xclip -selection clipboard -t image/png
 
 # change focus
 bindsym $mod+j focus left
@@ -158,8 +166,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -255,10 +263,10 @@ bindsym $mod+r mode "resize"
 
 # Window colors
 #                       border  background text    indicator
-client.focused          #FFFFFF #FFFFFF    #000000 #FFFFFF
-client.unfocused        #1a1a1a #1a1a1a    #777777 #000000
-client.focused_inactive #1a1a1a #1a1a1a    #FFFFFF #000000
-client.urgent           #E53935 #E53935    #FFFFFF #FFFFFF
+client.focused          #dfdfdf #dfdfdf    #000000 #dfdfdf
+client.unfocused        #1a1a1a #1a1a1a    #777777 #1a1a1a
+client.focused_inactive #1a1a1a #1a1a1a    #FFFFFF #1a1a1a
+client.urgent           #E53935 #E53935    #FFFFFF #dfdfdf
 
 # Wallpaper and picom
 exec_always --no-startup-id ~/screen.sh 

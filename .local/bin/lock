@@ -2,4 +2,10 @@
 
 #B='--blur 5'
 
-i3lock -c 000000 --insidevercolor='00000000' --ringvercolor='777777' --insidewrongcolor='00000000' --ringwrongcolor='FF0000' --insidecolor='00000000' --verifcolor='00000000' --wrongcolor='00000000' --layoutcolor='FFFFFF' --linecolor='00000000' --ringcolor='FFFFFF' --separatorcolor='FFFFFF' --keyhlcolor='777777' --bshlcolor='FF0000' --clock --timecolor='FFFFFF' --datecolor='FFFFFF' --timestr="%I:%M" --datestr="%A, %d %b" $B
+background="-c 000000"
+
+text="--timecolor=FFFFFF --datecolor=FFFFFF"
+
+backcircle="--insidevercolor=00000000"
+
+i3lock $background $text $backcircle --ringvercolor="777777" --insidewrongcolor="00000000" --ringwrongcolor="FF0000" --insidecolor="00000000" --verifcolor="00000000" --wrongcolor="00000000" --layoutcolor="FFFFFF" --linecolor="00000000" --ringcolor="FFFFFF" --separatorcolor="FFFFFF" --keyhlcolor="777777" --bshlcolor="FF0000" --clock  --timestr="%I:%M" --datestr="%A, %d de %b"
