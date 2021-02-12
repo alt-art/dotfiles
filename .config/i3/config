@@ -1,6 +1,6 @@
-exec_always xset s off
-exec_always xset -dpms
-exec_always xset s noblank
+exec xset s off
+exec xset -dpms
+exec xset s noblank
 
 exec_always --no-startup-id autotiling
 
@@ -269,8 +269,9 @@ client.focused_inactive #1a1a1a #1a1a1a    #FFFFFF #1a1a1a
 client.urgent           #E53935 #E53935    #FFFFFF #dfdfdf
 
 # Wallpaper and picom
-exec_always --no-startup-id ~/screen.sh 
-exec_always --no-startup-id feh --bg-tile ~/Imagens/Wallpapers/21.*
+exec_always --no-startup-id ~/screen.sh
+
+exec_always --no-startup-id xwallpaper --tile ~/Imagens/Wallpapers/21.*
 
 exec_always --no-startup-id lxpolkit
 
