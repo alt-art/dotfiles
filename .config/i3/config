@@ -271,7 +271,7 @@ client.urgent           #E53935 #E53935    #FFFFFF #dfdfdf
 # Wallpaper and picom
 exec_always --no-startup-id ~/screen.sh
 
-exec_always --no-startup-id xwallpaper --tile ~/Imagens/Wallpapers/21.*
+exec_always --no-startup-id hsetroot -root -tile ~/Imagens/Wallpapers/21.png
 
 exec_always --no-startup-id lxpolkit
 
@@ -303,3 +303,4 @@ bar {
 		urgent_workspace   #FFFFFF #E53935    #FFFFFF 
 	}
 }
+
