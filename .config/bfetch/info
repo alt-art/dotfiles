@@ -21,7 +21,7 @@
 COLOR="${1:-33}"
 USER="$USER"
 HOSTNAME=$(hostname)
-OS=$(lsb_release -sd | sed -e 's/"//g')
+OS="Pop!_OS 20.04 LTS"
 SEPARATOR=$(echo "${USER:-user}@${HOSTNAME:-hostname}" | sed -e 's/./-/g')
 KERNEL=$(uname -sr)
 UPTIME=$(uptime -p | sed -e 's/up //')
@@ -29,7 +29,7 @@ PACKAGES="$(~/.config/bfetch/pkgs.sh)"
 SHELL=$(basename "$SHELL")
 
 # WM
-WM="$(~/.config/bfetch/wm.sh)"
+WM="$DESKTOP_SESSION"
 
 TERMINAL="$TERM"
 
