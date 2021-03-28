@@ -1,0 +1,7 @@
+#!/bin/sh 
+input=$(printf "HDMI\nAnalog\n" | dmenu -i -m 0)
+
+case $input in
+	"HDMI") pactl set-card-profile alsa_card.pci-0000_00_1b.0 output:hdmi-stereo+input:analog-stereo;;
+	"Analog") pactl set-card-profile alsa_card.pci-0000_00_1b.0 output:analog-stereo+input:analog-stereo;;
+esac
