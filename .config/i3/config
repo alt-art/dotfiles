@@ -1,3 +1,9 @@
+# Clipboard manager
+
+exec CM_MAX_CLIPS=10 clipmenud
+
+bindsym $mod+c exec clipmenu 
+
 # Wallpaper and compton
 
 # Compton for transparency
