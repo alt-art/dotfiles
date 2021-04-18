@@ -124,7 +124,7 @@ font pango:MesloLGS NF,Bold 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec alacritty
 
 bindsym $mod+i exec st
 
