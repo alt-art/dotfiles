@@ -7,7 +7,7 @@ bindsym $mod+c exec clipmenu
 # Wallpaper and compton
 
 # Compton for transparency
-exec_always --no-startup-id compton --config ~/.config/compton.conf
+exec_always --no-startup-id picom --config ~/.config/compton/config
 
 exec_always --no-startup-id hsetroot -root -tile ~/Imagens/Wallpapers/21.png
 
