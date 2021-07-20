@@ -1,0 +1,5 @@
+#!/bin/sh
+
+notify-send Recorder "Stop Recording"
+
+pkill ffmpeg
