@@ -1,4 +1,4 @@
-set number
+:set tabstop=4 shiftwidth=4 expandtab number
 
 call plug#begin()
 	Plug 'scrooloose/nerdtree'
@@ -9,6 +9,5 @@ call plug#begin()
 	Plug 'nathanaelkane/vim-indent-guides'
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'pangloss/vim-javascript'
-	Plug 'valloric/youcompleteme'
 	Plug 'scrooloose/syntastic'
 call plug#end()
