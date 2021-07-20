@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 #B='--blur 5'
 
 background="-c 000000"
 
-text="--timecolor=FFFFFF --datecolor=FFFFFF"
+text="--time-color=FFFFFF --date-color=FFFFFF"
 
-backcircle="--insidevercolor=00000000"
+backcircle="--insidever-color=00000000"
 
-i3lock $background $text $backcircle --ringvercolor="777777" --insidewrongcolor="00000000" --ringwrongcolor="FF0000" --insidecolor="00000000" --verifcolor="00000000" --wrongcolor="00000000" --layoutcolor="FFFFFF" --linecolor="00000000" --ringcolor="FFFFFF" --separatorcolor="FFFFFF" --keyhlcolor="777777" --bshlcolor="FF0000" --clock  --timestr="%I:%M" --datestr="%A, %d de %b"
+i3lock $background $text $backcircle --ringver-color="777777" --insidewrong-color="00000000" --ringwrong-color="FF0000" --inside-color="00000000" --verif-color="00000000" --wrong-color="00000000" --layout-color="FFFFFF" --line-color="00000000" --ring-color="FFFFFF" --separator-color="FFFFFF" --keyhl-color="777777" --bshl-color="FF0000" --clock  --time-str="%I:%M" --date-str="%A, %d de %b"
