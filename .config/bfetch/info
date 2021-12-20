@@ -18,19 +18,16 @@
 
 
 # Values
-COLOR="${1:-33}"
+COLOR="${1:-97}"
 USER="$USER"
-HOSTNAME=$(hostname)
-OS="Pop!_OS 20.04 LTS"
+HOSTNAME=$(cat /etc/hostname)
+OS=$(cat /etc/os-release | awk -F= '{if($1 == "NAME") {print $2}}' | sed '1 s/"//g')
 SEPARATOR=$(echo "${USER:-user}@${HOSTNAME:-hostname}" | sed -e 's/./-/g')
 KERNEL=$(uname -sr)
 UPTIME=$(uptime -p | sed -e 's/up //')
 PACKAGES="$(~/.config/bfetch/pkgs.sh)"
 SHELL=$(basename "$SHELL")
-
-# WM
-WM="$DESKTOP_SESSION"
-
+WM="$XDG_CURRENT_DESKTOP"
 TERMINAL="$TERM"
 
 # It's highly recommend to used with Fetchutils:
@@ -42,13 +39,13 @@ TERMINAL="$TERM"
 # Start
 printf "\033[1;${COLOR}m${USER:-user}\033[0m@\033[1;${COLOR}m${HOSTNAME:-hostname}\033[0m
 \033[0m${SEPARATOR:----}\033[0m
-\033[1;${COLOR}mOS        \033[0m${OS:-os}\033[0m
-\033[1;${COLOR}mKERNEL    \033[0m${KERNEL:-kernel}\033[0m
-\033[1;${COLOR}mUPTIME    \033[0m${UPTIME:-uptime}\033[0m
-\033[1;${COLOR}mPACKAGES  \033[0m${PACKAGES:-packages}\033[0m
-\033[1;${COLOR}mSHELL     \033[0m${SHELL:-shell}\033[0m
-\033[1;${COLOR}mWM        \033[0m${WM:-wm}\033[0m
-\033[1;${COLOR}mTERMINAL  \033[0m${TERMINAL:-terminal}\033[0m"
+\033[1;${COLOR}mOS:        \033[0m${OS:-os}\033[0m
+\033[1;${COLOR}mKERNEL:    \033[0m${KERNEL:-kernel}\033[0m
+\033[1;${COLOR}mUPTIME:    \033[0m${UPTIME:-uptime}\033[0m
+\033[1;${COLOR}mPACKAGES:  \033[0m${PACKAGES:-packages}\033[0m
+\033[1;${COLOR}mSHELL:     \033[0m${SHELL:-shell}\033[0m
+\033[1;${COLOR}mWM:        \033[0m${WM:-wm}\033[0m
+\033[1;${COLOR}mTERMINAL:  \033[0m${TERMINAL:-terminal}\033[0m"
 
 
 exit 0
