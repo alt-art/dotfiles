@@ -1,0 +1,5 @@
+idle_fg = "#CCCCCC"
+info_fg = "#CCCCCC"
+good_fg = "#CCCCCC"
+warning_fg = "#CCCCCC"
+critical_fg = "#CCCCCC"

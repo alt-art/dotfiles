@@ -1,22 +1,10 @@
-[theme]
-name = "semi-native"
-
-[icons]
-name = "awesome"
+theme = "mono-gray"
+icons = "material-nf"
 
 [[block]]
 block = "music"
 player = "chromium"
 buttons = ["play", "next"]
-
-[[block]]
-block = "apt"
-interval = 600
-format = "{count:1} updates available"
-format_singular = "{count:1} update available"
-format_up_to_date = ""
-critical_updates_regex = "(linux|linux-lts|linux-zen)"
-
 
 [[block]]
 block = "backlight"
@@ -29,13 +17,8 @@ format = "{percentage} {time}"
 
 [[block]]
 block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
+path = "/home"
 unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
 
 [[block]]
 block = "sound"
