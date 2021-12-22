@@ -1,8 +1,8 @@
 #!/bin/sh 
-input=$(printf "Bloquear\nDesligar\nReiniciar" | dmenu -i -m 0)
+input=$(printf "Suspender\nDesligar\nReiniciar" | dmenu -i -m 0)
 
 case $input in
 	"Desligar") systemctl poweroff;;
 	"Reiniciar") systemctl reboot;;
-	"Bloquear") lock;;
+    "Suspender") systemctl suspend;;
 esac
