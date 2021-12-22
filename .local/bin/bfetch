@@ -36,7 +36,7 @@ if [ -f "$XDG_CONFIG_HOME/bfetch/art"   ]; then ART_COMMANDS="${BFETCH_ART-$XDG_
 if [ -f "$XDG_CONFIG_HOME/bfetch/color" ]; then COLOR_COMMANDS="${BFETCH_COLOR-$XDG_CONFIG_HOME/bfetch/color}"; else COLOR_COMMANDS="$BFETCH_COLOR"; fi
 
 TEMPORARY="${BFETCH_TEMPORARY-$TMPDIR/bfetch_}$$"
-CLASSIC_MODE="${BFETCH_CLASSIC_MODE:-false}"
+CLASSIC_MODE=true
 CLASSIC_ART_RIGHT="${BFETCH_ART_RIGHT:-false}"
 PADDING="${BFETCH_PADDING:-1}"
 SEPARATOR="${BFETCH_SEPARATOR:-2}"
@@ -113,7 +113,7 @@ fetch_classic() {
 				reset='true'
 			;;
 			'info_color')
-				[ "$reset"= 'true' ] && print="$print\\033[9999999D\\033[$(( group_height - 1 ))A"
+				[ "$reset" == 'true' ] && print="$print\\033[9999999D\\033[$(( group_height - 1 ))A"
 				print_textart "$TEXTART_INFO" $(( FETCH_PADDING + group_padding ))
 				info_color_height="$INFO_HEIGHT"
 
