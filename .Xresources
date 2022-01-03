@@ -2,7 +2,7 @@ Xcursor.theme:	Simp1e-dark
 
 ! special
 
-st.font: MesloLGS NF:size=11:style=regular
+st.font: Iosevka:size=12:style=regular
 
 st.foreground:   #f8f8f2
 st.background:   #282a36
