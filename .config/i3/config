@@ -259,7 +259,7 @@ client.urgent           #E53935 #E53935    #FFFFFF #E53935
 bar {
 	output primary
 	position top
-	tray_padding 3
+	tray_padding 5
 	i3bar_command i3bar -t
 	status_command i3status-rs
 	colors {
