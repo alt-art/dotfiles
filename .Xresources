@@ -2,41 +2,25 @@ Xcursor.theme:	Simp1e-dark
 
 ! special
 
-st.font: Iosevka:size=12:style=regular
+*.font: Iosevka Term:size=12
 
-st.foreground:   #f8f8f2
-st.background:   #282a36
-st.cursorColor:  #f8f8f2
-
-! black
-st.color0:       #000000
-st.color8:       #4d4d4d
-
-! red
-st.color1:       #ff5555
-st.color9:       #ff6e67
-
-! green
-st.color2:       #50fa7b
-st.color10:      #5af78e
-
-! yellow
-st.color3:       #f1fa8c
-st.color11:      #f4f99d
-
-! blue
-st.color4:       #bd93f9
-st.color12:      #caa9fa
-
-! magenta
-st.color5:       #ff79c6
-st.color13:      #ff92d0
-
-! cyan
-st.color6:       #8be9fd
-st.color14:      #9aedfe
-
-! white
-st.color7:       #bfbfbf
-st.color15:      #e6e6e6
-
+! Dracula Xresources palette
+*.foreground:  #F8F8F2
+*.cursorColor: #F8F8F2
+*.background:  #282A36
+*.color0:      #000000
+*.color8:      #4D4D4D
+*.color1:      #FF5555
+*.color9:      #FF6E67
+*.color2:      #50FA7B
+*.color10:     #5AF78E
+*.color3:      #F1FA8C
+*.color11:     #F4F99D
+*.color4:      #BD93F9
+*.color12:     #CAA9FA
+*.color5:      #FF79C6
+*.color13:     #FF92D0
+*.color6:      #8BE9FD
+*.color14:     #9AEDFE
+*.color7:      #BFBFBF
+*.color15:     #E6E6E6
