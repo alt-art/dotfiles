@@ -1,10 +1,12 @@
-exec_always --no-startup-id hsetroot -center ~/Imagens/Wallpapers/16.jpg
+exec_always xset s off
+
+exec_always xset -dpms
+
+exec_always --no-startup-id hsetroot -fill ~/Imagens/Wallpapers/default
 
 exec_always --no-startup-id compton --config ~/.config/compton/config
 
 exec_always --no-startup-id autotiling
-
-exec_always keepassxc
 
 exec_always --no-startup-id gnome-keyring-daemon
 
@@ -263,12 +265,12 @@ bar {
 	i3bar_command i3bar -t
 	status_command i3status-rs
 	colors {
-		background #000000a0
-		separator #FFFFFF
+		background #00000030
+		separator #FFFFFFAA
 		#                  border  background text
-		focused_workspace  #FFFFFF #000000a0  #FFFFFF
-		inactive_workspace #777777 #000000a0  #777777
-		urgent_workspace   #FFFFFF #E53935    #FFFFFF   
+		focused_workspace  #FFFFFF   #00000030  #FFFFFF
+		inactive_workspace #FFFFFF60 #00000030  #FFFFFF60
+		urgent_workspace   #FFFFFF   #E53935    #FFFFFF   
 	}
 }
 
