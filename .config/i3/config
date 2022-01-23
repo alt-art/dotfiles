@@ -113,10 +113,14 @@ bindsym $mod+Shift+d exec --no-startup-id pri3o-dmenu-desktop -m "dmenu -i -c -m
 
 bindsym $mod+p exec --no-startup-id power-dmenu
 
-#Screen capture window
+# Screen capture window clipboard
 bindsym Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-#Screen capture selection
+# Screen capture selection clipboard
 bindsym $mod+Print exec maim -s | xclip -selection clipboard -t image/png
+# Screen capture window
+bindsym Shift+Print exec maim -i $(xdotool getactivewindow) ~/screen.png
+# Screen capture selection
+bindsym Shift+$mod+Print exec maim -s ~/screen.png
 
 # change focus
 bindsym $mod+j focus left
