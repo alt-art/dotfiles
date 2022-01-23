@@ -4,7 +4,6 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-fugitive'
-    Plug 'google/vim-codefmt'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'mhinz/vim-startify'
     Plug 'valloric/youcompleteme'
