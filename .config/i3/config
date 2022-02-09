@@ -12,6 +12,8 @@ exec_always --no-startup-id gnome-keyring-daemon
 
 exec_always --no-startup-id lxpolkit
 
+exec --no-startup-id dunst
+
 #Gaps
 gaps inner 7
 
