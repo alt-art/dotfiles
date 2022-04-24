@@ -11,6 +11,8 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+    yarn
+    archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
